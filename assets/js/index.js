@@ -25,7 +25,7 @@ $(document).ready(function(){
         });
     });
 
-    function runAfterLoadCompleted() {
+    function enableFullSizeImageLoad() {
         // load dog image in full scale when a thumbnail got clicked
         $('section').on('click', 'img' , function() {
 
@@ -39,6 +39,9 @@ $(document).ready(function(){
                 window.open(theImage.src,  null, 'height=' + winHeight + ', width=' + winWidth + ', toolbar=0, location=0, status=0, scrollbars=0, resizable=0');
             };
         });
+    }
+    
+    function enableLazyLoad() {
 
         var lazyloadImages = document.querySelectorAll("img.lazy");    
         var lazyloadThrottleTimeout;
@@ -70,6 +73,7 @@ $(document).ready(function(){
     }  
 
     $( document ).ajaxStop(function() {
-        runAfterLoadCompleted();
+        enableFullSizeImageLoad();
+        enableLazyLoad();
     });
 });
