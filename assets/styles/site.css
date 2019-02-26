@@ -18,6 +18,107 @@ a {
   color: var(--color-link);
 }
 
+#header {
+  z-index: 2;
+}
+
+#leftPaw,
+#rightPaw {
+  position: fixed;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+#leftPaw {
+  top: 15px;
+  animation: leftPawMove 15s infinite;
+  -webkit-animation: leftPawMove 15s infinite;
+  -moz-animation: leftPawMove 15s infinite;
+}
+@keyframes leftPawMove {
+  0%   {left: 0px;}
+  10%  {left: 10%;}
+  20%  {left: 20%;}
+  30%  {left: 30%;}
+  40% {left: 40%;}
+  50% {left: 50%;}
+  60% {left: 60%;}
+  70% {left: 70%;}
+  80% {left: 80%;}
+  90% {left: 90%;}
+  100% {left: 100%;}
+}
+@-webkit-keyframes leftPawMove {
+  0%   {left: 0px;}
+  10%  {left: 10%;}
+  20%  {left: 20%;}
+  30%  {left: 30%;}
+  40% {left: 40%;}
+  50% {left: 50%;}
+  60% {left: 60%;}
+  70% {left: 70%;}
+  80% {left: 80%;}
+  90% {left: 90%;}
+  100% {left: 100%;}
+}
+@-moz-keyframes leftPawMove {
+  0%   {left: 0px;}
+  10%  {left: 10%;}
+  20%  {left: 20%;}
+  30%  {left: 30%;}
+  40% {left: 40%;}
+  50% {left: 50%;}
+  60% {left: 60%;}
+  70% {left: 70%;}
+  80% {left: 80%;}
+  90% {left: 90%;}
+  100% {left: 100%;}
+}
+
+#rightPaw {
+  top: 35px;
+  left: 10px;
+  animation: rightPawMove 15s infinite;
+  -webkit-animation: rightPawMove 15s infinite;
+  -moz-animation: rightPawMove 15s infinite;
+}
+@keyframes rightPawMove {
+  5%   {left: 5%;}
+  15%  {left: 15%;}
+  25%  {left: 25%;}
+  35%  {left: 35%;}
+  45% {left: 45%;}
+  55% {left: 55%;}
+  65% {left: 65%;}
+  75% {left: 75%;}
+  85% {left: 85%;}
+  95% {left: 95%;}
+}
+@-webkit-keyframes rightPawMove {
+  5%   {left: 5%;}
+  15%  {left: 15%;}
+  25%  {left: 25%;}
+  35%  {left: 35%;}
+  45% {left: 45%;}
+  55% {left: 55%;}
+  65% {left: 65%;}
+  75% {left: 75%;}
+  85% {left: 85%;}
+  95% {left: 95%;}
+}
+@-moz-keyframes rightPawMove {
+  5%   {left: 5%;}
+  15%  {left: 15%;}
+  25%  {left: 25%;}
+  35%  {left: 35%;}
+  45% {left: 45%;}
+  55% {left: 55%;}
+  65% {left: 65%;}
+  75% {left: 75%;}
+  85% {left: 85%;}
+  95% {left: 95%;}
+}
+
 /* Snippets */
 .site-header {
   padding-bottom: 2rem;
@@ -38,3 +139,25 @@ a {
   font-family: var(--font-serif);
   text-align: center;
 }
+
+section { 
+  margin: 0 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-auto-rows: 0;
+}
+
+.imageItem {
+  grid-row-end: span 30;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  position: relative;
+  vertical-align: middle;
+  max-width: 100%;
+  cursor: pointer;
+}
+
